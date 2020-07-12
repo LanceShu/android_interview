@@ -247,11 +247,11 @@ public static void quickSort(int[] numbers, int low, int high) {
 public static int getMiddle(int[] numbers, int low, int high) {
     int temp = numbers[low]; // 数组的第一个作为中轴
     while (low < high) {
-        while (low < high && numbers[high] > temp) {
+        while (low < high && numbers[high] >= temp) {
             high--;
         }
         numbers[low] = numbers[high];// 比中轴小的记录移到低端
-        while (low < high && numbers[low] < temp) {
+        while (low < high && numbers[low] <= temp) {
             low++;
         }
         numbers[high] = numbers[low]; // 比中轴大的记录移到高端
